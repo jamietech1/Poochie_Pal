@@ -92,7 +92,7 @@ async def get_locations():
     except FileNotFoundError:
         print("File not found: locations.json")
     return locations
-
+# Add your certificate if you wish to use SSL 
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run(app, host="0.0.0.0", port=443, ssl_keyfile="server.key", ssl_certfile="server.crt")
